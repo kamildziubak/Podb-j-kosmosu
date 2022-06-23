@@ -1,0 +1,101 @@
+body{
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
+    -webkit-text-stroke: 0.6px #000000;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-image: url("https://img.redro.pl/naklejki/stars-in-the-night-sky-background-texture-milky-way-glow-of-star-400-172050845.jpg");
+    background-color: #cccccc;
+}
+
+div.tresc {
+    margin-left: 150px ; 
+}
+
+div.lewa {
+    width: 48%;
+    padding: 20px ;
+    margin: 5px;
+    float:left ;
+    box-sizing: border-box ;
+    background-color: rgba(173, 216, 230, 0.400);
+    border-left: 1px solid black ;
+  border-right: 1px solid black ;
+  }
+  
+  div.prawa {
+    width: 48%;
+    padding: 20px ;
+    margin: 5px;
+    min-width: 0px;
+    float:right ;
+    box-sizing: border-box ;
+    background-color: rgba(173, 216, 230, 0.400);
+  }
+
+div.menu {
+    width: 12%;
+    margin: 5px;
+    float:left ;
+    box-sizing: border-box ;
+    background-color: rgba(173, 216, 230, 0.400);
+  }
+
+a{
+    color: rgb(196, 193, 49);
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+h1{
+    color:lightgreen
+}
+h2{
+    color:lightgreen
+}
+h3{
+    color:lightgreen
+}
+.wazne{
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+    color: rgb(201, 32, 32);
+}
+
+th{
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+    color: rgb(201, 32, 32);
+}
+
+#wyscig{
+    color: purple;
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+}
+
+#cytat{
+    color:rgb(212, 41, 135);
+    -webkit-text-stroke: 0.25px lightblue;
+    font-family: 'URW Chancery L', cursive;
+    text-align: center;
+    font-size: 45px;
+}
+
+div.naglowek{
+    width: 100%;
+    box-sizing: border-box ;
+    background-color: rgba(173, 216, 230, 0.400);
+    clear:both ;
+    font-size: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+
+div.stopka{
+    width: 100%;
+    box-sizing: border-box ;
+    background-color: rgba(173, 216, 230, 0.400);
+    clear:both;
+    text-align: right;
+    margin: 5px;
+    padding: 5px;
+}
+
+div.tresc::after {content: "";clear: both;display: grid;}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content = "text/html;charset=utf-8"/>
+        <meta name = "Description" content = "Panel administratora strony Podbój kosmosu"/>
+        <title>Podbój kosmosu - panel administratora</title>
+        <script>
+            function tabela(){
+                const poczatkujacy = document.getElementById("poczatkujacy");
+                const sredni = document.getElementById("sredni");
+                const zaawansowany = document.getElementById("zaawansowany");
+                const expert = document.getElementById("expert");
+
+                var string="";
+                
+                if(poczatkujacy.checked==true)
+                    string = string + "a=poczatkujacy&";
+                if(sredni.checked==true)
+                    string = string + "b=sredni&";
+                if(zaawansowany.checked==true)
+                    string = string + "c=zaawansowany&";
+                if(expert.checked==true)
+                    string = string + "d=expert";
+
+                var xhttp=new XMLHttpRequest();
+                xhttp.open("GET", "table.php?"+string, false);
+                xhttp.send();
+                
+                const dane = document.getElementById("dane");
+
+                dane.innerHTML=xhttp.responseText;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Podbój kosmosu - panel administratora</h1>
+        <h2>Wykaz członków klubu miłośników astronomii</h2>
+        <p>Wyświetl tylko tych, których poziom wiedzy jest:
+        <form>
+            <input type="checkbox" id="poczatkujacy" value="poczatkujacy" onclick="tabela()" checked >
+            <label for="poczatkujacy">Początkujący</label>
+            <input type="checkbox" id="sredni" value="sredni" onclick="tabela()" checked>
+            <label for="sredni">Średniozaawansowany</label>
+            <input type="checkbox" id="zaawansowany" value="zaawansowany" onclick="tabela()" checked>
+            <label for="zaawansowany">Zaawansowany</label>
+            <input type="checkbox" id="expert" value="expert" onclick="tabela()" checked>
+            <label for="expert">Ekspert naukowy</label>
+        </form>
+        </p>
+
+        <div id="dane">
+            <script>tabela()</script>
+        </div>
+    
+    </body>
+</html>
